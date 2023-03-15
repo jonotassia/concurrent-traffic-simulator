@@ -80,7 +80,7 @@ void TrafficLight::cycleThroughPhases()
 
         // Set current phase
         if (this->_currentPhase == green) {
-            _currentPhase == TrafficLightPhase::red;
+            _currentPhase = TrafficLightPhase::red;
         } else {
             _currentPhase = TrafficLightPhase::green;
         }
