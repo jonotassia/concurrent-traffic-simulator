@@ -20,7 +20,7 @@ T MessageQueue<T>::receive()
 
     // Dequeue and return message after wait is complete
     T message = std::move(_queue.front());
-    _queue.pop_front()
+    _queue.pop_front();
     return message;
 }
 
