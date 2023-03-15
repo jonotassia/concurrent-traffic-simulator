@@ -19,7 +19,8 @@ T MessageQueue<T>::receive()
     _condition.wait(lock1);
 
     // Dequeue and return message after wait is complete
-    T message = std::move(_queue.pop_front());
+    T message = std::move(_queue.front());
+    _queue.pop_front()
     return message;
 }
 
